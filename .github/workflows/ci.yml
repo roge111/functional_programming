@@ -23,7 +23,7 @@ jobs:
       #   run: dotnet restore projectElra6/projectElra6.fsproj
 
       - name: Build project
-        run: dotnet build ./projectElra6
+        run: dotnet build Laboratory work 1/projectElra6
 
       - name: Set DOTNET_ROLL_FORWARD
         run: echo "DOTNET_ROLL_FORWARD=latestMajor" >> $GITHUB_ENV
@@ -31,7 +31,7 @@ jobs:
         run: |
           dotnet tool install -g dotnet-fsharplint
           echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
-          dotnet fsharplint lint ./projectElra6
+          dotnet fsharplint lint Laboratory work 1/projectElra6
       - name: Formatter
         run: |
           dotnet tool install -g fantomas-tool
@@ -41,11 +41,11 @@ jobs:
       
         
       - name: Run project
-        run: dotnet run --project ./projectElra6
+        run: dotnet run --project Laboratory work 1/projectElra6
 
 
       - name: Tests
         run: |
-            dotnet restore ProjectTests/ProjectTests.fsproj
-            dotnet build ./ProjectTests
-            dotnet test ./ProjectTests
+            dotnet restore Laboratory work 1/ProjectTests/ProjectTests.fsproj
+            dotnet build  Laboratory work 1/ProjectTests
+            dotnet test  Laboratory work 1/ProjectTests

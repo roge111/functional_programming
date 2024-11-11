@@ -19,8 +19,8 @@ jobs:
         with:
           dotnet-version: '8.0.x'
           
-      - name: Restore dependencies
-        run: dotnet restore projectElra6/projectElra6.fsproj
+      # - name: Restore dependencies
+      #   run: dotnet restore projectElra6/projectElra6.fsproj
 
       - name: Build project
         run: dotnet build ./projectElra6
